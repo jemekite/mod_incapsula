@@ -5,7 +5,7 @@
   Apache module for [Incapsula.com](http://incapsula.com) backends
 
 
-    git clone https://github.com/usefulz/mod_incapsula
+    git clone https://github.com/jemekite/mod_incapsula
     cd mod_incapsula/
     apxs -c -i -a mod_incapsula.c
 
