@@ -50,7 +50,10 @@ static const char* IC_DEFAULT_TRUSTED_PROXY[] = {
   "103.28.248.0/22",
   "45.64.64.0/22",
   "185.11.124.0/22", 
-  "192.230.64.0/18"
+  "192.230.64.0/18",
+/* IPv6 Address Ranges */
+  "2620:28:4000::/44",
+  "2a02:e980::/29",
 };
 static const size_t IC_DEFAULT_TRUSTED_PROXY_COUNT = 
   sizeof(IC_DEFAULT_TRUSTED_PROXY)/sizeof(char *);
@@ -562,7 +565,7 @@ static const command_rec incapsula_cmds[] =
                     "to present IP headers. Overrides the defaults."),
     AP_INIT_NO_ARGS("DenyAllButIncapsula", deny_all_set, NULL, RSRC_CONF,
                     "Return a 403 status to all requests which do not originate from "
-                    "a IncapsulaRemoteIPTrustedProxy."),
+                    "an IncapsulaRemoteIPTrustedProxy."),
     { NULL }
 };
 
